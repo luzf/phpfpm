@@ -16,7 +16,3 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN docker-php-ext-install zip
-
-RUN mkdir -p /home/wwwroot/data/cache && usermod -u 1000 www-data
-
-WORKDIR /home/wwwroot
